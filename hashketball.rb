@@ -252,7 +252,16 @@ def winning_team
 end
 
 def player_with_longest_name
-
+  long_name = ""
+  game_hash.each do |location, data|
+    data[:players].each do |player, details|
+      name_length = player.length
+      if name_length > long_name.length
+        long_name = player
+      end
+    end
+  end
+  long_name
 end
 
 def long_name_steals_a_ton

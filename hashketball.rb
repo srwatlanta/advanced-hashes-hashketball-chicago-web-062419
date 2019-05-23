@@ -212,3 +212,20 @@ def big_shoe_rebounds
   end
   rebounds
 end
+
+def most_points_scored
+  most_points = 0
+  game_hash.each do |location, data|
+end
+
+def winning_team
+
+end
+
+def player_with_longest_name
+
+end
+
+def long_name_steals_a_ton
+
+end

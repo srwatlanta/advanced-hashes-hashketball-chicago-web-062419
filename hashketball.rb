@@ -233,6 +233,18 @@ def winning_team
   game_hash[:home][:players].each do |name, data|
     data[:points].each do |point|
       home_points << point
+    end
+  end
+  game_hash[:away][:players].each do |name, data|
+    data[:points].each do |point|
+      away_points << point
+    end
+  end
+  if home_points > away_points
+    game_hash[:home][:team_name]
+  else
+    game_hash[:away][:team_name]
+  end
 end
 
 def player_with_longest_name

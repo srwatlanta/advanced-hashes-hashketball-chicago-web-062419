@@ -231,8 +231,7 @@ def winning_team
   home_points = []
   away_points = []
   game_hash[:home][:players].each do |name, data|
-    data[:points].each do |point|
-      home_points << point
+      home_points << data[:points]
     end
   end
   game_hash[:away][:players].each do |name, data|

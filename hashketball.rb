@@ -228,7 +228,11 @@ def most_points_scored
 end
 
 def winning_team
-
+  home_points = []
+  away_points = []
+  game_hash[:home][:players].each do |name, data|
+    data[:points].each do |point|
+      home_points << point
 end
 
 def player_with_longest_name
